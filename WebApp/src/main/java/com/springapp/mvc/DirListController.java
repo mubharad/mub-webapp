@@ -14,7 +14,7 @@ import java.io.FilenameFilter;
 
 @Controller
 @RequestMapping("/")
-public class DirListController extends AbstractController {
+public class DirListController {
 	@RequestMapping(method = RequestMethod.GET)
 	public ModelAndView getDirList() {
         //return back to index.jsp
@@ -34,10 +34,5 @@ public class DirListController extends AbstractController {
                 return name.toLowerCase().endsWith(".pdf");
             }
         });
-    }
-
-    @Override
-    protected ModelAndView handleRequestInternal(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse) throws Exception {
-        return null;  //To change body of implemented methods use File | Settings | File Templates.
     }
 }
